@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 
@@ -6,8 +5,13 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Enemy", menuName = "ScriptableObjects/Enemies", order = 1)]
 public class Enemy : ScriptableObject
 {
-    [SerializeField] private String _name;
+    [SerializeField] private string _name;
     [SerializeField] private float _damage;
     [SerializeField] private float _health;
     [SerializeField] private float _speed;
+
+    public string Name => _name;
+    public float Damage => _damage;
+    public float Health => _health;
+    public float Speed => _speed;
 }
