@@ -3,7 +3,7 @@ using UnityEngine;
 
 // Use the CreateAssetMenu attribute to allow creating instances of this ScriptableObject from the Unity Editor.
 [CreateAssetMenu(fileName = "Enemy", menuName = "ScriptableObjects/Enemies", order = 1)]
-public class Enemy : ScriptableObject
+public class EnemySO : ScriptableObject
 {
     [SerializeField] private string _name;
     [SerializeField] private float _damage;

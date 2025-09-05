@@ -5,14 +5,17 @@ public class CameraMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     [SerializeField] private float _speed = 1f;
+
+    private Player _player;
     void Start()
     {
-        
+       
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         Vector3 direction = Vector3.zero;
 
         if (Input.GetKey(KeyCode.W))

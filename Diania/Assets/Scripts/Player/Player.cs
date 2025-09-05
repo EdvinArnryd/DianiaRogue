@@ -1,12 +1,15 @@
-using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
 
-    private String name;
+    private string name;
 
     private float xp = 0;
+
+    private bool isAlive = true;
+
+    [SerializeField]private float health = 100;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -23,5 +26,20 @@ public class Player : MonoBehaviour
     {
         xp += amount;
         print(xp);
+    }
+
+    public void TakeDamage(float damage)
+    {
+        health -= damage;
+    }
+
+    public float GetHealth()
+    {
+        return health;
+    }
+
+    public void PlayerDied()
+    {
+        isAlive = false;
     }
 }
