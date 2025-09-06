@@ -1,21 +1,31 @@
 using System;
 using UnityEngine;
 
-public class Movement : MonoBehaviour
+public class Enemy : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     [SerializeField] private EnemySO _enemy;
+    [SerializeField] private GameObject EXPPrefab;
 
     private Player _player;
+
+    private float _health;
+    private float _damage;
+    private float _speed;
+    private string _name;
 
     private bool _isColliding = false;
     void Start()
     {
+        _health = _enemy.Health;
+        _damage = _enemy.Damage;
+        _speed = _enemy.Speed;
+        _name = _enemy.Name;
+        
         _player = GameObject.FindWithTag("Player").GetComponent<Player>();
     }
 
-    // Update is called once per frame
     void Update()
     {
         transform.position = Vector3.MoveTowards(transform.position, _player.transform.position, _enemy.Speed * Time.deltaTime);
@@ -37,7 +47,6 @@ public class Movement : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Player"))
         {
-            print("Collision detected");
             _isColliding = true;
         }
     }
@@ -47,6 +56,17 @@ public class Movement : MonoBehaviour
         if (other.gameObject.CompareTag("Player"))
         {
             _isColliding = false;
+        }
+    }
+
+    public void TakeDamage(float damage)
+    {
+        _health -= damage;
+        if (_health <= 0)
+        {
+            print("Enemy Died");
+            // Instantiate(EXPPrefab, transform.position)
+            
         }
     }
 }

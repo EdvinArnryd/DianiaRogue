@@ -1,31 +1,28 @@
+using System;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
 
-    private string name;
+    private string _name;
 
-    private float xp = 0;
+    private float _xp = 0;
 
-    private bool isAlive = true;
+    private bool _isAlive = true;
+
+    private Vector2 _weaponPosition;
 
     [SerializeField]private float health = 100;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    private void Start()
     {
-        
+        _weaponPosition = transform.position;
     }
 
     public void GainExp(float amount)
     {
-        xp += amount;
-        print(xp);
+        _xp += amount;
+        print(_xp);
     }
 
     public void TakeDamage(float damage)
@@ -40,6 +37,6 @@ public class Player : MonoBehaviour
 
     public void PlayerDied()
     {
-        isAlive = false;
+        _isAlive = false;
     }
 }
