@@ -9,6 +9,7 @@ public class Weapon : MonoBehaviour
     private float _damage;
     private float _size;
     private float _cooldown;
+    private Transform _playerTransform;
 
     private void Start()
     {
@@ -16,11 +17,13 @@ public class Weapon : MonoBehaviour
         _damage = _weaponData.Damage;
         _size = _weaponData.Size;
         _cooldown = _weaponData.Cooldown;
+        _playerTransform = GameObject.FindWithTag("Player").GetComponent<Transform>();
     }
     
     public float ProjectileSpeed => _projectileSpeed;
     public float Damage => _damage;
     public float Size => _size;
     public float Cooldown => _cooldown;
+    public Transform PlayerTransform => _playerTransform;
     
 }
