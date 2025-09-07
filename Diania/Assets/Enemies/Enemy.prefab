@@ -48,7 +48,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemy: {fileID: 11400000, guid: 68141ee878b784644ab07ba4c1f56dd4, type: 2}
-  EXPPrefab: {fileID: 4562212758268324858, guid: 9f423165bbb754e47a0a3875ff3f8e0e, type: 3}
+  _EXPPrefab: {fileID: 4562212758268324858, guid: 9f423165bbb754e47a0a3875ff3f8e0e, type: 3}
 --- !u!50 &8283357145081132208
 Rigidbody2D:
   serializedVersion: 5

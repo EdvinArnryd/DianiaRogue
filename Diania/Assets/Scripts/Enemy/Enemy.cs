@@ -6,7 +6,7 @@ public class Enemy : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     [SerializeField] private EnemySO _enemy;
-    [SerializeField] private GameObject EXPPrefab;
+    [SerializeField] private GameObject _EXPPrefab;
 
     private Player _player;
 
@@ -52,7 +52,8 @@ public class Enemy : MonoBehaviour
 
         if (other.gameObject.CompareTag("Weapon"))
         {
-            TakeDamage(1);
+            Weapon weapon = other.gameObject.GetComponent<Weapon>();
+            TakeDamage(weapon.Damage);
             print(_health);
         }
     }
@@ -71,8 +72,8 @@ public class Enemy : MonoBehaviour
         if (_health <= 0)
         {
             print("Enemy Died");
-            // Instantiate(EXPPrefab, transform.position)
-            
+            Instantiate(_EXPPrefab, transform.position, Quaternion.identity);
+            Destroy(this.gameObject);
         }
     }
 }

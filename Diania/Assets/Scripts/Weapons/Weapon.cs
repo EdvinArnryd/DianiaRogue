@@ -18,4 +18,9 @@ public class Weapon : MonoBehaviour
         _cooldown = _weaponData.Cooldown;
     }
     
+    public float ProjectileSpeed => _projectileSpeed;
+    public float Damage => _damage;
+    public float Size => _size;
+    public float Cooldown => _cooldown;
+    
 }
