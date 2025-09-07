@@ -49,6 +49,12 @@ public class Enemy : MonoBehaviour
         {
             _isColliding = true;
         }
+
+        if (other.gameObject.CompareTag("Weapon"))
+        {
+            TakeDamage(1);
+            print(_health);
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)

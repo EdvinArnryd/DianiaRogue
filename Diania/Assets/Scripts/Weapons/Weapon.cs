@@ -17,13 +17,5 @@ public class Weapon : MonoBehaviour
         _size = _weaponData.Size;
         _cooldown = _weaponData.Cooldown;
     }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.gameObject.CompareTag("Enemy"))
-        {
-            Enemy enemy = other.GetComponent<Enemy>();
-            enemy.TakeDamage(_damage);
-        }
-    }
+    
 }
