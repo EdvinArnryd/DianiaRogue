@@ -2,12 +2,22 @@ using UnityEngine;
 
 public class SpinningStar : Weapon
 {
-    // Update is called once per frame
+    public Transform player;
+    public float rotationSpeed = 200f;
+    public float orbitRadius = 2f;
+
+    private float angle;
+
     void Update()
     {
-        // transform.position = Vector2.MoveTowards(transform.position,new Vector2(0, 500), 2f);
-        
-        transform.RotateAround(PlayerTransform.position, new Vector3(0,0,1), 200f * Time.deltaTime);
-        // transform.Rotate(new Vector3(0,0,1), 200f * Time.deltaTime);
+        if (player == null) return;
+
+        angle += rotationSpeed * Time.deltaTime;
+
+        // Compute position relative to player
+        float rad = angle * Mathf.Deg2Rad;
+        Vector3 offset = new Vector3(Mathf.Cos(rad), Mathf.Sin(rad), 0) * orbitRadius;
+
+        transform.position = player.position + offset;
     }
 }

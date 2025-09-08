@@ -636,6 +636,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _weaponData: {fileID: 11400000, guid: 05f5c8866f58d084fae544615cb5a448, type: 2}
+  player: {fileID: 935174312}
+  rotationSpeed: 200
+  orbitRadius: 2
 --- !u!1001 &1362891332172490390
 PrefabInstance:
   m_ObjectHideFlags: 0
