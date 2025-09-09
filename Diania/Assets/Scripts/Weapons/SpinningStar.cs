@@ -12,7 +12,7 @@ public class SpinningStar : Weapon
     {
         if (player == null) return;
 
-        angle += rotationSpeed * Time.deltaTime;
+        angle += ProjectileSpeed * rotationSpeed * Time.deltaTime;
 
         // Compute position relative to player
         float rad = angle * Mathf.Deg2Rad;
