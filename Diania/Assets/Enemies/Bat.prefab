@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 8283357145081132208}
   - component: {fileID: 4194464832636150141}
   m_Layer: 7
-  m_Name: Enemy
+  m_Name: Bat
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
