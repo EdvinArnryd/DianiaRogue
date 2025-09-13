@@ -41,6 +41,22 @@ public class Enemy : MonoBehaviour
                 Destroy(_player.gameObject);
             }
         }
+
+
+        RotateTowardsPlayer();
+    }
+
+    private void RotateTowardsPlayer()
+    {
+        print("Inside ROtate");
+        if (transform.position.x > _player.transform.position.x)
+        {
+            transform.rotation = Quaternion.Euler(0, 180, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
     }
     
     private void OnTriggerEnter2D(Collider2D other)
@@ -54,7 +70,6 @@ public class Enemy : MonoBehaviour
         {
             Weapon weapon = other.gameObject.GetComponent<Weapon>();
             TakeDamage(weapon.Damage);
-            print(_health);
         }
     }
 
@@ -71,7 +86,6 @@ public class Enemy : MonoBehaviour
         _health -= damage;
         if (_health <= 0)
         {
-            print("Enemy Died");
             Instantiate(_EXPPrefab, transform.position, Quaternion.identity);
             Destroy(this.gameObject);
         }

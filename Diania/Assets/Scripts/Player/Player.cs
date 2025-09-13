@@ -22,7 +22,6 @@ public class Player : MonoBehaviour
     public void GainExp(float amount)
     {
         _xp += amount;
-        print(_xp);
     }
 
     public void TakeDamage(float damage)
