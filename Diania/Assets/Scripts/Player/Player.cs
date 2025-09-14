@@ -12,7 +12,7 @@ public class Player : MonoBehaviour
 
     private Vector2 _weaponPosition;
 
-    [SerializeField]private float health = 100;
+    [SerializeField]private float _health = 100;
 
     private void Start()
     {
@@ -26,12 +26,12 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        health -= damage;
+        _health -= damage;
     }
 
     public float GetHealth()
     {
-        return health;
+        return _health;
     }
 
     public void PlayerDied()

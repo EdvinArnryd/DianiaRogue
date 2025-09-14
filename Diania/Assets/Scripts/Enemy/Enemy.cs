@@ -48,7 +48,6 @@ public class Enemy : MonoBehaviour
 
     private void RotateTowardsPlayer()
     {
-        print("Inside ROtate");
         if (transform.position.x > _player.transform.position.x)
         {
             transform.rotation = Quaternion.Euler(0, 180, 0);
