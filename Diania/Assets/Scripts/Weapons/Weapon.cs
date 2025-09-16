@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour
     private float _cooldown;
     private Transform _playerTransform;
 
-    private void Start()
+    private void Awake()
     {
         _projectileSpeed = _weaponData.ProjectileSpeed;
         _damage = _weaponData.Damage;

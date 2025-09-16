@@ -34,7 +34,7 @@ public class Enemy : MonoBehaviour
         {
             _player.TakeDamage(_enemy.Damage / 60);
 
-            print(_player.GetHealth());
+            // print(_player.GetHealth());
             if (_player.GetHealth() <= 0)
             {
                 _player.PlayerDied();
