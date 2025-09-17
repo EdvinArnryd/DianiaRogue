@@ -12,6 +12,8 @@ public class Player : MonoBehaviour
 
     private Vector2 _weaponPosition;
 
+    private LevelSystem _levelSystem;
+
     [SerializeField]private float _health = 100;
 
     private void Start()
