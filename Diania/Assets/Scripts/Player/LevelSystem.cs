@@ -13,6 +13,8 @@ public class LevelSystem : MonoBehaviour
 
     [SerializeField] private TMP_Text _textLevel;
 
+    [SerializeField] private Slider _slider;
+
     void Start()
     {
         SetLevelText();
@@ -26,11 +28,19 @@ public class LevelSystem : MonoBehaviour
     public void GainExp(float xpAmount)
     {
         _xp += xpAmount;
+        IncrementProgressbar(xpAmount);
         if (_xp >= _xpThreshold)
         {
             _level++;
             _xpThreshold *= _xpThresholdMultiplier;
             SetLevelText();
+            _slider.value = 0;
         }
+    }
+
+    private void IncrementProgressbar(float xp)
+    {
+        float dividedXp = xp / _xpThreshold;
+        _slider.value += dividedXp;
     }
 }
