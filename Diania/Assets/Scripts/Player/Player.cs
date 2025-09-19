@@ -6,24 +6,15 @@ public class Player : MonoBehaviour
 
     private string _name;
 
-    private float _xp = 0;
-
     private bool _isAlive = true;
 
     private Vector2 _weaponPosition;
-
-    private LevelSystem _levelSystem;
 
     [SerializeField]private float _health = 100;
 
     private void Start()
     {
         _weaponPosition = transform.position;
-    }
-
-    public void GainExp(float amount)
-    {
-        _xp += amount;
     }
 
     public void TakeDamage(float damage)

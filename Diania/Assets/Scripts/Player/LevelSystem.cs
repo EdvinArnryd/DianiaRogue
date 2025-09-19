@@ -1,4 +1,6 @@
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class LevelSystem : MonoBehaviour
 {
@@ -9,13 +11,26 @@ public class LevelSystem : MonoBehaviour
     [SerializeField] private float _xpThresholdMultiplier = 1.5f;
     private int _level = 1;
 
+    [SerializeField] private TMP_Text _textLevel;
+
+    void Start()
+    {
+        SetLevelText();
+    }
+
+    private void SetLevelText()
+    {
+        _textLevel.text = _level.ToString();
+    }
+
     public void GainExp(float xpAmount)
     {
         _xp += xpAmount;
-        if(_xp >= _xpThreshold)
+        if (_xp >= _xpThreshold)
         {
             _level++;
             _xpThreshold *= _xpThresholdMultiplier;
+            SetLevelText();
         }
     }
 }

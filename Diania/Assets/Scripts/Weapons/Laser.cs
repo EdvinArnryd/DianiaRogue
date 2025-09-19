@@ -15,6 +15,6 @@ public class Laser : Weapon
     void Update()
     {
         transform.position += _playerDirection * ProjectileSpeed * Time.deltaTime;
-        Debug.Log(transform.position);
+        //Debug.Log(transform.position);
     }
 }
