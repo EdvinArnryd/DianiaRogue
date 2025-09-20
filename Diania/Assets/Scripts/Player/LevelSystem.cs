@@ -8,7 +8,7 @@ public class LevelSystem : MonoBehaviour
 
     private float _xp = 0;
     [SerializeField] private float _xpThreshold = 5;
-    [SerializeField] private float _xpThresholdMultiplier = 1.5f;
+    [SerializeField] private float _xpThresholdMultiplier = 2.5f;
     private int _level = 1;
 
     [SerializeField] private TMP_Text _textLevel;
@@ -28,9 +28,11 @@ public class LevelSystem : MonoBehaviour
     public void GainExp(float xpAmount)
     {
         _xp += xpAmount;
-        IncrementProgressbar(xpAmount);
+        print(_xp + " Threshold: " + _xpThreshold);
+        UpdateProgressBar();
         if (_xp >= _xpThreshold)
         {
+            _xp -= _xpThreshold;
             _level++;
             _xpThreshold *= _xpThresholdMultiplier;
             SetLevelText();
@@ -38,9 +40,8 @@ public class LevelSystem : MonoBehaviour
         }
     }
 
-    private void IncrementProgressbar(float xp)
+    private void UpdateProgressBar()
     {
-        float dividedXp = xp / _xpThreshold;
-        _slider.value += dividedXp;
+        _slider.value = _xp / _xpThreshold;
     }
 }
