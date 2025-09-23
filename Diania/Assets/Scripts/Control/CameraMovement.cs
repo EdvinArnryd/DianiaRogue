@@ -7,9 +7,9 @@ public class CameraMovement : MonoBehaviour
 
     [SerializeField] private float _speed = 1f;
     [SerializeField] private Transform _playerTransform;
-
     [SerializeField] private GameObject _idleSprite;
     [SerializeField] private GameObject _gif;
+    [SerializeField] private PauseManager _pauseManager;
 
     private Player _player;
     void Start()
@@ -20,7 +20,7 @@ public class CameraMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (_pauseManager.IsPaused) return;
         Vector3 direction = Vector3.zero;
 
         if (Input.GetKey(KeyCode.W))

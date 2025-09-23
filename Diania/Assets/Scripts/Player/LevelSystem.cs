@@ -15,6 +15,8 @@ public class LevelSystem : MonoBehaviour
 
     [SerializeField] private Slider _slider;
 
+    [SerializeField] private PauseManager _pauseManager;
+
     void Start()
     {
         SetLevelText();

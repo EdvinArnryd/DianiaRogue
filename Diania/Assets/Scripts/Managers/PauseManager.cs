@@ -6,6 +6,8 @@ public class PauseManager : MonoBehaviour
 
     [SerializeField] private GameObject _pausePanel;
 
+    public bool IsPaused => _isPaused;
+
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
