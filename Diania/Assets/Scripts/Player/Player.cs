@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
@@ -10,7 +11,9 @@ public class Player : MonoBehaviour
 
     private Vector2 _weaponPosition;
 
-    [SerializeField]private float _health = 100;
+    public event Action OnPlayerDied;
+
+    [SerializeField] private float _health = 100;
 
     private void Start()
     {
@@ -30,5 +33,6 @@ public class Player : MonoBehaviour
     public void PlayerDied()
     {
         _isAlive = false;
+        OnPlayerDied?.Invoke();
     }
 }
