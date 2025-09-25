@@ -1,6 +1,7 @@
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using System;
 
 public class LevelSystem : MonoBehaviour
 {
@@ -16,6 +17,8 @@ public class LevelSystem : MonoBehaviour
     [SerializeField] private Slider _slider;
 
     [SerializeField] private PauseManager _pauseManager;
+
+    public event Action OnLevelUp;
 
     void Start()
     {
@@ -34,6 +37,7 @@ public class LevelSystem : MonoBehaviour
         UpdateProgressBar();
         if (_xp >= _xpThreshold)
         {
+            OnLevelUp?.Invoke();
             _xp -= _xpThreshold;
             _level++;
             _xpThreshold *= _xpThresholdMultiplier;

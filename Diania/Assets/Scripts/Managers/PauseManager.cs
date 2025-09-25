@@ -1,6 +1,14 @@
 using UnityEngine;
 using UnityEngine.UI;
 
+public enum MenuState
+{
+    None,
+    EscapeMenu,
+    DeathMenu,
+    LevelUpMenu
+}
+
 public class PauseManager : MonoBehaviour
 {
     private bool _isPaused = false;
@@ -10,15 +18,17 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject _deathMenu;
     [SerializeField] private GameObject _levelUpMenu;
     [SerializeField] private Player _player;
+    [SerializeField] private LevelSystem _levelSystem;
     private Image _pausePanelImage;
 
-
+    private MenuState _currentMenuState = MenuState.None;
 
     public bool IsPaused => _isPaused;
 
     private void Awake()
     {
         _player.OnPlayerDied += OnPlayerDiedHandler;
+        _levelSystem.OnLevelUp += OnPlayerLevelUpHandler;
     }
 
     private void Start()
@@ -29,6 +39,7 @@ public class PauseManager : MonoBehaviour
     private void OnDestroy()
     {
         _player.OnPlayerDied -= OnPlayerDiedHandler;
+        _levelSystem.OnLevelUp -= OnPlayerLevelUpHandler;
     }
 
     void Update()
@@ -41,38 +52,64 @@ public class PauseManager : MonoBehaviour
 
     private void TogglePause()
     {
+        if (_currentMenuState != MenuState.None && _currentMenuState != MenuState.EscapeMenu) return;
         _isPaused = !_isPaused;
 
         if (_isPaused)
         {
             Time.timeScale = 0f;
             _pausePanel.SetActive(true);
-            _pauseMenu.SetActive(true);
+            SetMenuState(MenuState.EscapeMenu);
         }
         else
         {
-            Time.timeScale = 1f;
-            _pausePanel.SetActive(false);
-            _pauseMenu.SetActive(false);
+            UnPause();
+        }
+    }
+
+    private void SetMenuState(MenuState state)
+    {
+        _isPaused = true;
+        _currentMenuState = state;
+        Time.timeScale = 0f;
+        _pausePanel.SetActive(true);
+
+        _deathMenu.SetActive(false);
+        _levelUpMenu.SetActive(false);
+        _pauseMenu.SetActive(false);
+
+        switch (_currentMenuState)
+        {
+            case MenuState.EscapeMenu:
+                _pauseMenu.SetActive(true);
+                _pausePanelImage.color = new Color(100f / 255f, 100f / 255f, 100f / 255f, 200f / 255f);
+                break;
+            case MenuState.DeathMenu:
+                _deathMenu.SetActive(true);
+                _pausePanelImage.color = new Color(126f / 255f, 35f / 255f, 35f / 255f, 200f / 255f);
+                break;
+            case MenuState.LevelUpMenu:
+                _levelUpMenu.SetActive(true);
+                _pausePanelImage.color = new Color(51f / 255f, 63f / 255f, 100f / 255f, 200f / 255f);
+                break;
         }
     }
 
     private void OnPlayerDiedHandler()
     {
-        if (!_isPaused)
-        {
-            TogglePause();
-            _pausePanelImage.color = new Color(82, 15, 15, 52);
-            _deathMenu.SetActive(true);
-        }
+        SetMenuState(MenuState.DeathMenu);
     }
 
     private void OnPlayerLevelUpHandler()
     {
-        if (!_isPaused)
-        {
-            TogglePause();
-            _levelUpMenu.SetActive(true);
-        }
+        SetMenuState(MenuState.LevelUpMenu);
+    }
+
+    public void UnPause()
+    {
+        _isPaused = false;
+        Time.timeScale = 1f;
+        _pausePanel.SetActive(false);
+        _currentMenuState = MenuState.None;
     }
 }

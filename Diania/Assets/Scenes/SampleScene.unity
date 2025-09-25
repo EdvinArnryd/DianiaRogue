@@ -1371,6 +1371,7 @@ MonoBehaviour:
   _deathMenu: {fileID: 375819407}
   _levelUpMenu: {fileID: 1383674317}
   _player: {fileID: 935174315}
+  _levelSystem: {fileID: 1791156153298430056}
 --- !u!4 &766348240
 Transform:
   m_ObjectHideFlags: 0
@@ -2518,7 +2519,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.1981132, g: 0.1981132, b: 0.1981132, a: 0.90588236}
+  m_Color: {r: 0.1999822, g: 0.24701592, b: 0.3962264, a: 0.77254903}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -3443,6 +3444,17 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: af574254c1933ee41b5da662b6044767, type: 3}
+--- !u!114 &1791156153298430056 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 6528471556289889656, guid: af574254c1933ee41b5da662b6044767, type: 3}
+  m_PrefabInstance: {fileID: 1791156153298430055}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c37c624e03a6d1c4ea9ccffdef015a6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5783888682508854110
 PrefabInstance:
   m_ObjectHideFlags: 0
