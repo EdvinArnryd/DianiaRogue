@@ -20,11 +20,11 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject _deathMenu;
     [SerializeField] private GameObject _levelUpMenu;
     [SerializeField] private TMP_Text _text;
-    
+
     [Header("Class References")]
     [SerializeField] private Player _player;
     [SerializeField] private LevelSystem _levelSystem;
-    
+
     private Image _pausePanelImage;
 
     private MenuState _currentMenuState = MenuState.None;
@@ -123,5 +123,10 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 1f;
         _pausePanel.SetActive(false);
         _currentMenuState = MenuState.None;
+    }
+
+    public void ChestPickedUp()
+    {
+        
     }
 }
