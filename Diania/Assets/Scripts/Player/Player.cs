@@ -1,9 +1,10 @@
 using System;
+using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-
     private string _name;
 
     private bool _isAlive = true;
@@ -13,6 +14,8 @@ public class Player : MonoBehaviour
     public event Action OnPlayerDied;
 
     [SerializeField] private float _health = 100;
+
+    private List<Item> _itemInventory;
 
     private void Start()
     {
@@ -33,5 +36,10 @@ public class Player : MonoBehaviour
     {
         _isAlive = false;
         OnPlayerDied?.Invoke();
+    }
+
+    public void AddItemToInventory(Item item)
+    {
+        _itemInventory.Add(item);
     }
 }
