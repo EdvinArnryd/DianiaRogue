@@ -7,7 +7,8 @@ public enum MenuState
     None,
     EscapeMenu,
     DeathMenu,
-    LevelUpMenu
+    LevelUpMenu,
+    LootMenu
 }
 
 public class PauseManager : MonoBehaviour
@@ -19,6 +20,7 @@ public class PauseManager : MonoBehaviour
     [SerializeField] private GameObject _pauseMenu;
     [SerializeField] private GameObject _deathMenu;
     [SerializeField] private GameObject _levelUpMenu;
+    [SerializeField] private GameObject _lootMenu;
     [SerializeField] private TMP_Text _text;
 
     [Header("Class References")]
@@ -83,6 +85,7 @@ public class PauseManager : MonoBehaviour
         _deathMenu.SetActive(false);
         _levelUpMenu.SetActive(false);
         _pauseMenu.SetActive(false);
+        _lootMenu.SetActive(false);
 
         switch (_currentMenuState)
         {
@@ -104,6 +107,12 @@ public class PauseManager : MonoBehaviour
                 _text.text = "Level Up!";
                 _text.color = Color.blue;
                 break;
+            case MenuState.LootMenu:
+                _lootMenu.SetActive(true);
+                _pausePanelImage.color = new Color(30f / 255f, 30f / 255f, 30f / 255f, 200f / 255f);
+                _text.text = "Loot!";
+                _text.color = Color.yellow;
+                break;
         }
     }
 
@@ -117,16 +126,16 @@ public class PauseManager : MonoBehaviour
         SetMenuState(MenuState.LevelUpMenu);
     }
 
+    public void ChestPickedUp()
+    {
+        SetMenuState(MenuState.LootMenu);
+    }
+
     public void UnPause()
     {
         _isPaused = false;
         Time.timeScale = 1f;
         _pausePanel.SetActive(false);
         _currentMenuState = MenuState.None;
-    }
-
-    public void ChestPickedUp()
-    {
-        
     }
 }
