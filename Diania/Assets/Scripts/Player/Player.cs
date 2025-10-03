@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using UnityEngine.UI;
 using UnityEngine;
 
 public class Player : MonoBehaviour
@@ -13,8 +14,11 @@ public class Player : MonoBehaviour
     public event Action OnPlayerDied;
 
     [SerializeField] private float _health = 100;
+    [SerializeField] private Slider _healthBar;
 
     private List<Item> _itemInventory;
+
+    //[SerializeField] private SpriteRenderer _spriteRenderer;
 
     private void Start()
     {
@@ -24,6 +28,12 @@ public class Player : MonoBehaviour
     public void TakeDamage(float damage)
     {
         _health -= damage;
+        UpdateProgressBar();
+    }
+
+    private void UpdateProgressBar()
+    {
+        _healthBar.value = _health / 100f;
     }
 
     public float GetHealth()

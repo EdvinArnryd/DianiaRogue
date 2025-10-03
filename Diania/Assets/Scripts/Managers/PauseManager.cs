@@ -82,11 +82,6 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 0f;
         _pausePanel.SetActive(true);
 
-        _deathMenu.SetActive(false);
-        _levelUpMenu.SetActive(false);
-        _pauseMenu.SetActive(false);
-        _lootMenu.SetActive(false);
-
         switch (_currentMenuState)
         {
             case MenuState.EscapeMenu:
@@ -137,5 +132,10 @@ public class PauseManager : MonoBehaviour
         Time.timeScale = 1f;
         _pausePanel.SetActive(false);
         _currentMenuState = MenuState.None;
+        
+        _deathMenu.SetActive(false);
+        _levelUpMenu.SetActive(false);
+        _pauseMenu.SetActive(false);
+        _lootMenu.SetActive(false);
     }
 }

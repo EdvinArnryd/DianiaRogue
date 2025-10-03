@@ -60,6 +60,4 @@ public class LootTable : MonoBehaviour
     {
         return Random.Range(0, currentList.Count);
     }
-
-
 }
