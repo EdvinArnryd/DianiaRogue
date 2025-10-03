@@ -17,4 +17,9 @@ public class ItemSO : ScriptableObject
     [SerializeField] private Rarity _rarity;
     [SerializeField] private Sprite _icon;
 
+    public string Name => _name;
+    public string Description => _description;
+    public Rarity Rarity => _rarity;
+    public Sprite Icon => _icon;
+
 }
