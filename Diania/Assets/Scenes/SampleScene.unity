@@ -8364,12 +8364,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _commonList:
   - {fileID: 3174128195721885885, guid: 1b6e6f555fe0e7241b2e0d086b6394a8, type: 3}
+  - {fileID: 3174128195721885885, guid: 8a33430128b68094ea5b08aef72d55b3, type: 3}
+  - {fileID: 3174128195721885885, guid: 4e405671e8398b44a8f8d2277646c558, type: 3}
   _rareList:
   - {fileID: 3174128195721885885, guid: 0b31579cb4f1ca641aa20ad76f5aa4db, type: 3}
+  - {fileID: 3174128195721885885, guid: 623e0b0f2db7b3e4a8eb13fa0d359a67, type: 3}
   _epicList:
   - {fileID: 3174128195721885885, guid: 016d359a0935cdd4593fef26ccddc5d3, type: 3}
+  - {fileID: 3174128195721885885, guid: ac02b1c9e0761494db83e193efad1f28, type: 3}
   _legendaryList:
   - {fileID: 3174128195721885885, guid: b7dba190e1a0e8b4782acb12bc80c47a, type: 3}
+  - {fileID: 3174128195721885885, guid: 78fef71930330e2408a71bad8a3a3990, type: 3}
   _rarityResult: 0
 --- !u!4 &551630838
 Transform:
