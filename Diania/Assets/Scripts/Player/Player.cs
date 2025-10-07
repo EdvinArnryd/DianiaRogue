@@ -16,8 +16,6 @@ public class Player : MonoBehaviour
     [SerializeField] private float _health = 100;
     [SerializeField] private Slider _healthBar;
 
-    private List<Item> _itemInventory;
-
     //[SerializeField] private SpriteRenderer _spriteRenderer;
 
     private void Start()
@@ -28,10 +26,10 @@ public class Player : MonoBehaviour
     public void TakeDamage(float damage)
     {
         _health -= damage;
-        UpdateProgressBar();
+        UpdateHealthBar();
     }
 
-    private void UpdateProgressBar()
+    private void UpdateHealthBar()
     {
         _healthBar.value = _health / 100f;
     }
@@ -45,10 +43,5 @@ public class Player : MonoBehaviour
     {
         _isAlive = false;
         OnPlayerDied?.Invoke();
-    }
-
-    public void AddItemToInventory(Item item)
-    {
-        _itemInventory.Add(item);
     }
 }

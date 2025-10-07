@@ -1,4 +1,5 @@
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,6 +14,8 @@ public enum MenuState
 
 public class PauseManager : MonoBehaviour
 {
+    public static PauseManager Instance;
+
     private bool _isPaused = false;
 
     [Header("UI Elements")]
@@ -35,6 +38,10 @@ public class PauseManager : MonoBehaviour
 
     private void Awake()
     {
+        
+        if(Instance == null) Instance = this;
+        else Destroy(gameObject);
+        
         _player.OnPlayerDied += OnPlayerDiedHandler;
         _levelSystem.OnLevelUp += OnPlayerLevelUpHandler;
     }
@@ -121,8 +128,9 @@ public class PauseManager : MonoBehaviour
         SetMenuState(MenuState.LevelUpMenu);
     }
 
-    public void ChestPickedUp()
+    public void OnPlayerPickupHandler()
     {
+        print("Pickup Handler");
         SetMenuState(MenuState.LootMenu);
     }
 
@@ -137,5 +145,15 @@ public class PauseManager : MonoBehaviour
         _levelUpMenu.SetActive(false);
         _pauseMenu.SetActive(false);
         _lootMenu.SetActive(false);
+    }
+    
+    void OnEnable()
+    {
+        var animators = GetComponentsInChildren<Animator>();
+        foreach (var animator in animators)
+        {
+            animator.Rebind();   // Reset Animator bindings
+            animator.Update(0f); // Force apply the first frame
+        }
     }
 }
