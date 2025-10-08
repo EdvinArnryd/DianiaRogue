@@ -9,19 +9,13 @@ public class Player : MonoBehaviour
 
     private bool _isAlive = true;
 
-    private Vector2 _weaponPosition;
-
+    [SerializeField] private Transform _playerTransform;
+    public Transform PlayerTransform => _playerTransform;
+    
     public event Action OnPlayerDied;
 
     [SerializeField] private float _health = 100;
     [SerializeField] private Slider _healthBar;
-
-    //[SerializeField] private SpriteRenderer _spriteRenderer;
-
-    private void Start()
-    {
-        _weaponPosition = transform.position;
-    }
 
     public void TakeDamage(float damage)
     {

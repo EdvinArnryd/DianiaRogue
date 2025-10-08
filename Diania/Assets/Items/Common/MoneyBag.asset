@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 256f853debce51644962a18dbe6cb6e0, type: 3}
   m_Name: MoneyBag
   m_EditorClassIdentifier: 
-  _name: MoenyBag
+  _name: Money Bag
   _description: Money!
   _rarity: 0
   _icon: {fileID: 5727101463259792520, guid: ac5d2bf1084bf8846acf85d2ad535e3e, type: 3}

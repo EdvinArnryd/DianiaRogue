@@ -1,16 +1,13 @@
+using System;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class WeaponInventory : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    private List<Weapon> _weaponInventory;
 
-    // Update is called once per frame
-    void Update()
+    private void Awake()
     {
-        
+        _weaponInventory = new List<Weapon>();
     }
 }

@@ -87,6 +87,37 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!1 &3332900060700969437
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 533077857697280161}
+  m_Layer: 6
+  m_Name: CenterTransform
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &533077857697280161
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3332900060700969437}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.486, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 8045707590063910085}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &4353582468032826007
 GameObject:
   m_ObjectHideFlags: 0
@@ -242,6 +273,7 @@ MonoBehaviour:
   _playerTransform: {fileID: 8045707590063910085}
   _idleSprite: {fileID: 1045905684974429825}
   _gif: {fileID: 7910167384676668709}
+  _pauseManager: {fileID: 0}
 --- !u!1 &7027427048052299372
 GameObject:
   m_ObjectHideFlags: 0
@@ -277,6 +309,7 @@ Transform:
   m_Children:
   - {fileID: 6929762039456808256}
   - {fileID: 675778855121761649}
+  - {fileID: 533077857697280161}
   m_Father: {fileID: 8671498317338517051}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!61 &8777339591938940514
@@ -338,6 +371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _health: 100
+  _healthBar: {fileID: 0}
 --- !u!50 &7639152018111346277
 Rigidbody2D:
   serializedVersion: 5
@@ -381,6 +415,7 @@ MonoBehaviour:
   _xpThresholdMultiplier: 1.5
   _textLevel: {fileID: 0}
   _slider: {fileID: 0}
+  _pauseManager: {fileID: 0}
 --- !u!1001 &972478469209801293
 PrefabInstance:
   m_ObjectHideFlags: 0

@@ -65,11 +65,11 @@ public class Enemy : MonoBehaviour
             _isColliding = true;
         }
 
-        if (other.gameObject.CompareTag("Weapon"))
-        {
-            Weapon weapon = other.gameObject.GetComponent<Weapon>();
-            TakeDamage(weapon.Damage);
-        }
+        // if (other.gameObject.CompareTag("Weapon"))
+        // {
+        //     Weapon weapon = other.gameObject.GetComponent<Weapon>();
+        //     TakeDamage(weapon.Damage);
+        // }
     }
 
     private void OnTriggerExit2D(Collider2D other)

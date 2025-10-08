@@ -8,6 +8,8 @@ public class LootTable : MonoBehaviour
     [SerializeField] private List<Item> _rareList;
     [SerializeField] private List<Item> _epicList;
     [SerializeField] private List<Item> _legendaryList;
+    
+    [SerializeField] private List<Weapon> _weapons;
 
     public Rarity _rarityResult;
 
@@ -36,27 +38,32 @@ public class LootTable : MonoBehaviour
     public Item ItemResult()
     {
         RarityResult();
-        Item itemLoot = _commonList[RandomResult(_commonList)];
+        Item itemLoot = _commonList[RandomItemResult(_commonList)];
         switch (_rarityResult)
         {
             case Rarity.Common:
-                itemLoot = _commonList[RandomResult(_commonList)];
+                itemLoot = _commonList[RandomItemResult(_commonList)];
                 break;
             case Rarity.Rare:
-                itemLoot = _rareList[RandomResult(_rareList)];
+                itemLoot = _rareList[RandomItemResult(_rareList)];
                 break;
             case Rarity.Epic:
-                itemLoot = _epicList[RandomResult(_epicList)];
+                itemLoot = _epicList[RandomItemResult(_epicList)];
                 break;
             case Rarity.Legendary:
-                itemLoot = _legendaryList[RandomResult(_legendaryList)];
+                itemLoot = _legendaryList[RandomItemResult(_legendaryList)];
                 break;
         }
 
         return itemLoot;
     }
 
-    private int RandomResult(List<Item> currentList)
+    private int RandomItemResult(List<Item> currentList)
+    {
+        return Random.Range(0, currentList.Count);
+    }
+
+    private int RandomWeaponResult(List<Weapon> currentList)
     {
         return Random.Range(0, currentList.Count);
     }

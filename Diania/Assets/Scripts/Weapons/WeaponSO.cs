@@ -5,13 +5,17 @@ using UnityEngine;
 [CreateAssetMenu(fileName = "Weapon", menuName = "ScriptableObjects/Weapons", order = 1)]
 public class WeaponSO : ScriptableObject
 {
+    [SerializeField] private string _name;
     [SerializeField] private float _projectileSpeed;
     [SerializeField] private float _damage;
     [SerializeField] private float _size;
     [SerializeField] private float _cooldown;
+    [SerializeField] private Sprite _icon;
 
+    public string Name => _name;
     public float ProjectileSpeed => _projectileSpeed;
     public float Damage => _damage;
     public float Size => _size;
     public float Cooldown => _cooldown;
+    public Sprite Icon => _icon;
 }
