@@ -25,8 +25,11 @@ public class Player : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
-        _health -= damage;
-        UpdateHealthBar();
+        if(!PauseManager.Instance.IsPaused)
+        {
+            _health -= damage;
+            UpdateHealthBar();
+        }
     }
 
     private void UpdateHealthBar()

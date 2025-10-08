@@ -42,7 +42,4 @@ public class ItemInventory : MonoBehaviour
         if (iconImage != null)
             iconImage.sprite = item._itemData.Icon;
     }
-
-
-    
 }

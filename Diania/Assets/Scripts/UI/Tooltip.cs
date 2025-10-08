@@ -9,7 +9,6 @@ public class Tooltip : MonoBehaviour
 
     public TMP_Text _itemNameText;
     public TMP_Text _itemDescriptionText;
-    public RectTransform _background;
 
     private void Awake()
     {

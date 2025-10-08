@@ -1,6 +1,7 @@
 using TMPro;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 public enum MenuState
@@ -136,6 +137,8 @@ public class PauseManager : MonoBehaviour
 
     public void UnPause()
     {
+        EventSystem.current.SetSelectedGameObject(null);
+        Tooltip.Instance.Hide();
         _isPaused = false;
         Time.timeScale = 1f;
         _pausePanel.SetActive(false);
