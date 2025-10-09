@@ -2,15 +2,27 @@ using UnityEngine;
 
 public class MagicSquare : Weapon
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        transform.position = PlayerTransform.position;
-    }
+    [SerializeField] private GameObject _projectilePrefab; // The projectile prefab to shoot
 
-    // Update is called once per frame
+    private float _lastAttackTime;
+
     void Update()
     {
-        transform.Rotate(0,0,10 * Time.deltaTime);
+        // Step 1: Check if enough time has passed since the last attack
+        if (Time.time - _lastAttackTime >= Cooldown)
+        {
+            _lastAttackTime = Time.time; // reset cooldown timer
+            Shoot();
+        }
+    }
+
+    private void Shoot()
+    {
+        // Step 1: Spawn a projectile prefab in world space
+        GameObject proj = Instantiate(_projectilePrefab, PlayerTransform.position, Quaternion.identity);
+
+        // Step 2: Get the projectile script and initialize it
+        Projectile projectile = proj.GetComponent<Projectile>();
+        projectile.Initialize(Damage, ProjectileSpeed);
     }
 }

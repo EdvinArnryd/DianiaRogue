@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 603691540745618096}
   - component: {fileID: 5629284179869891511}
-  - component: {fileID: 174236339372555321}
+  - component: {fileID: 8330357762538875719}
   m_Layer: 0
   m_Name: Magic Square
   m_TagString: Weapon
@@ -80,7 +80,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.45503196, y: 0.46285254}
   m_EdgeRadius: 0
---- !u!114 &174236339372555321
+--- !u!114 &8330357762538875719
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,10 +89,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 1764802482684256345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d5ce4ba9903bbb149bbd34a84c0feb2f, type: 3}
+  m_Script: {fileID: 11500000, guid: 48fdaf38956fde4449461de62a73369f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _weaponData: {fileID: 11400000, guid: a5c9257c767ad4f4bb03d704d90c1003, type: 2}
 --- !u!1 &8205518497709383917
 GameObject:
   m_ObjectHideFlags: 0
