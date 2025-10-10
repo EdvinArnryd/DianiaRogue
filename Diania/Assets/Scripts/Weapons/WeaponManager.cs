@@ -22,7 +22,7 @@ public class WeaponManager : MonoBehaviour
         AddRandomWeapon();
     }
 
-    private void AddWeapon(Weapon weapon)
+    public void AddWeapon(Weapon weapon)
     {
         if(_weaponsInventory.Count < _inventorySize)
         {
@@ -51,6 +51,16 @@ public class WeaponManager : MonoBehaviour
 
         if (iconImage != null)
             iconImage.sprite = weapon.WeaponData.Icon;
+    }
+
+    public List<Weapon> GetAllWeapons()
+    {
+        return _allWeapons;
+    }
+    
+    public List<Weapon> GetPlayerWeapons()
+    {
+        return _weaponsInventory;
     }
 
 }

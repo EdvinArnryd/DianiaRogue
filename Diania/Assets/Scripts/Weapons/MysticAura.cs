@@ -36,7 +36,6 @@ public class MysticAura : Weapon
         
         if (other.gameObject.CompareTag("Enemy"))
         {
-            print("Enemy Entered mystic aura");
             Enemy enemy = other.gameObject.GetComponent<Enemy>();
             if (!enemy) return;
             _enemiesInRange.Add(enemy);

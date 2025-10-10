@@ -33,7 +33,6 @@ public class LevelSystem : MonoBehaviour
     public void GainExp(float xpAmount)
     {
         _xp += xpAmount;
-        print(_xp + " Threshold: " + _xpThreshold);
         UpdateProgressBar();
         if (_xp >= _xpThreshold)
         {
