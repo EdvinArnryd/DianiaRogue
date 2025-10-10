@@ -10,7 +10,8 @@ public class Weapon : MonoBehaviour
     private float _size;
     private float _cooldown;
     private Transform _playerTransform;
-    
+
+    public WeaponSO WeaponData => _weaponData;
     public float ProjectileSpeed => _projectileSpeed;
     public float Damage => _damage;
     public float Size => _size;

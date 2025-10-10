@@ -31,6 +31,16 @@ public class Tooltip : MonoBehaviour
         Vector2 mousePos = Input.mousePosition;
         transform.position = mousePos + new Vector2(10f, -10f);
     }
+    
+    public void Show(WeaponSO weapon)
+    {
+        _itemNameText.text = weapon.Name;
+        gameObject.SetActive(true);
+        _itemDescriptionText.text = "";
+
+        Vector2 mousePos = Input.mousePosition;
+        transform.position = mousePos + new Vector2(10f, -10f);
+    }
 
     public void Hide()
     {
