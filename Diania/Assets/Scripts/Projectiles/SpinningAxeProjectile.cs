@@ -1,16 +1,19 @@
 using UnityEngine;
 
-public class SpinningAxeProjectile : MonoBehaviour
+public class SpinningAxeProjectile : Projectile
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected override void Move()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        if (_target == null)
+        {
+            Destroy(gameObject);
+            return;
+        }
+    
+        transform.position = Vector2.MoveTowards(
+            transform.position,
+            _target.position,
+            _speed * Time.deltaTime
+        );
     }
 }

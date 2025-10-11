@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public abstract class Projectile : MonoBehaviour
@@ -5,9 +6,11 @@ public abstract class Projectile : MonoBehaviour
     protected float _damage;
     protected float _speed;
     protected float _lifetime = 5f;
+    public bool _isPierce;
 
     protected Transform _target;
     protected Vector3 _direction;
+
 
     public virtual void Initialize(float damage, float speed, Vector2 direction, Transform target = null)
     {
@@ -42,7 +45,8 @@ public abstract class Projectile : MonoBehaviour
             if (enemy != null)
             {
                 enemy.TakeDamage(_damage);
-                OnHitEnemy(enemy);
+                if(_isPierce)
+                    OnHitEnemy(enemy);
             }
         }
     }

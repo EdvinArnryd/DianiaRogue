@@ -150825,6 +150825,8 @@ MonoBehaviour:
   - {fileID: -6092948911442918565, guid: f9702fe7e504cb547a96f00a1ab40e46, type: 3}
   - {fileID: -8861050459365477766, guid: 63ad49da22073dc49b3a92ab17faca40, type: 3}
   - {fileID: 8870360219050823748, guid: a727b7006f935aa4a846d487665cff90, type: 3}
+  - {fileID: -8748875388286201694, guid: 59e63af048e7a3e4684f98f72c95f696, type: 3}
+  - {fileID: 8173782621123803981, guid: 3e233bd2be0a1d442b585b110c107fae, type: 3}
   _inventorySize: 4
 --- !u!1001 &4183138215530257488
 PrefabInstance:

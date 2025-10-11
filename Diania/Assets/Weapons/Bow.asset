@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Bow
   m_EditorClassIdentifier: 
   _name: Bow
-  _projectileSpeed: 2
+  _projectileSpeed: 4
   _damage: 2
   _size: 1
   _cooldown: 1
