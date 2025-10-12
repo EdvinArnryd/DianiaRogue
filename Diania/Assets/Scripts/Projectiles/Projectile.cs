@@ -45,7 +45,7 @@ public abstract class Projectile : MonoBehaviour
             if (enemy != null)
             {
                 enemy.TakeDamage(_damage);
-                if(_isPierce)
+                if(!_isPierce)
                     OnHitEnemy(enemy);
             }
         }

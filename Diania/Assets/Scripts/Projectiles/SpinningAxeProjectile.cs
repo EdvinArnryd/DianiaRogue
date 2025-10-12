@@ -12,6 +12,8 @@ public class SpinningAxeProjectile : Projectile
     }
     protected override void Move()
     {
+        transform.Rotate(0,0,45 * Time.deltaTime);
+
         Vector2 move = _direction.normalized * _speed  * Time.deltaTime;
         transform.Translate(move, Space.World);
     }

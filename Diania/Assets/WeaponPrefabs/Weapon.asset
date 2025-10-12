@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e99d59a4ef52485d95eab8fa966aa6e2, type: 3}
+  m_Name: Weapon
+  m_EditorClassIdentifier: 
+  _name: Fire Walker
+  _projectileSpeed: 1
+  _damage: 1
+  _size: 1
+  _cooldown: 0.4
+  _icon: {fileID: -3913077702065153691, guid: b0e9ca20f91c56d4584b8abcbe360590, type: 3}

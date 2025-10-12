@@ -19,7 +19,7 @@ public class WeaponManager : MonoBehaviour
 
     private void Start()
     {
-        AddRandomWeapon();
+        //AddRandomWeapon();
     }
 
     public void AddWeapon(Weapon weapon)
