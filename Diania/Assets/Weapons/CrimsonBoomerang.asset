@@ -17,4 +17,4 @@ MonoBehaviour:
   _damage: 1
   _size: 1
   _cooldown: 1
-  _icon: {fileID: 0}
+  _icon: {fileID: -4976155550392908415, guid: b3a5fb63598d8f942a6df8acf4338248, type: 3}
