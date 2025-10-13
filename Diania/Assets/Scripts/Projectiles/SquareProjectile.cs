@@ -4,6 +4,9 @@ public class SquareProjectile : Projectile
 {
     protected override void Move()
     {
-        transform.Rotate(0,0,10 * Time.deltaTime);
+        transform.Rotate(0, 0, 10 * Time.deltaTime);
+    
+        Vector2 move = _direction.normalized * _speed  * Time.deltaTime;
+        transform.Translate(move, Space.World);
     }
 }

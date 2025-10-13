@@ -18,11 +18,15 @@ public class MagicSquare : Weapon
 
     private void Shoot()
     {
-        // Step 1: Spawn a projectile prefab in world space
+        // 2. Pick random direction
+        float angle = Random.Range(0f, 360f);
+        Vector2 direction = new Vector2(Mathf.Cos(angle * Mathf.Deg2Rad), Mathf.Sin(angle * Mathf.Deg2Rad));
+
+        // 3. Spawn projectile
         GameObject proj = Instantiate(_projectilePrefab, PlayerTransform.position, Quaternion.identity);
 
-        // Step 2: Get the projectile script and initialize it
+        // 4. Initialize projectile
         Projectile projectile = proj.GetComponent<Projectile>();
-        projectile.Initialize(Damage, ProjectileSpeed);
+        projectile.Initialize(Damage, ProjectileSpeed, direction, null);
     }
 }

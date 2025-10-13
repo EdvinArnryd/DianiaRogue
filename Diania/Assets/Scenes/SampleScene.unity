@@ -15661,6 +15661,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Fire Walker
       objectReference: {fileID: 0}
+    - target: {fileID: 8815925264692349247, guid: 0bbbe78812cd3fd4a8e118d1ac9278ff, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -148746,6 +148750,63 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 35da5412ec2255c418fc2cf264b816ce, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1001 &967901372
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5058158041513020712, guid: 671d2567bd61aa54c82380442eccc308, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058158041513020712, guid: 671d2567bd61aa54c82380442eccc308, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058158041513020712, guid: 671d2567bd61aa54c82380442eccc308, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058158041513020712, guid: 671d2567bd61aa54c82380442eccc308, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058158041513020712, guid: 671d2567bd61aa54c82380442eccc308, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058158041513020712, guid: 671d2567bd61aa54c82380442eccc308, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058158041513020712, guid: 671d2567bd61aa54c82380442eccc308, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058158041513020712, guid: 671d2567bd61aa54c82380442eccc308, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058158041513020712, guid: 671d2567bd61aa54c82380442eccc308, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5058158041513020712, guid: 671d2567bd61aa54c82380442eccc308, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8291602827597142623, guid: 671d2567bd61aa54c82380442eccc308, type: 3}
+      propertyPath: m_Name
+      value: MagicalCube
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 671d2567bd61aa54c82380442eccc308, type: 3}
 --- !u!1 &1002164222
 GameObject:
   m_ObjectHideFlags: 0
@@ -148936,7 +148997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8815925264692349247, guid: 096260a859545b24698665264a8ce051, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -151263,3 +151324,4 @@ SceneRoots:
   - {fileID: 644166491}
   - {fileID: 1027151648}
   - {fileID: 908922658}
+  - {fileID: 967901372}
