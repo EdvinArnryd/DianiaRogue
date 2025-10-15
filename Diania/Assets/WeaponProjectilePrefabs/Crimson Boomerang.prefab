@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 603691540745618096}
   - component: {fileID: 5629284179869891511}
-  - component: {fileID: -2040276825662721407}
+  - component: {fileID: 1352738434113617881}
   m_Layer: 0
   m_Name: Crimson Boomerang
   m_TagString: Weapon
@@ -80,7 +80,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.60334396, y: 0.24836913}
   m_EdgeRadius: 0
---- !u!114 &-2040276825662721407
+--- !u!114 &1352738434113617881
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,9 +89,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 1764802482684256345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 734a710935f6a3741a28dfc89abc5230, type: 3}
+  m_Script: {fileID: 11500000, guid: b13276d9d97cee649bd957a351b81e4d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _isPierce: 0
 --- !u!1 &2940987167915820038
 GameObject:
   m_ObjectHideFlags: 0

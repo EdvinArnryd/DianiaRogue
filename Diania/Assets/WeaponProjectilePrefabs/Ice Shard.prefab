@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 603691540745618096}
   - component: {fileID: 5629284179869891511}
-  - component: {fileID: -2040276825662721407}
+  - component: {fileID: 8038848519932348971}
   m_Layer: 0
   m_Name: Ice Shard
   m_TagString: Weapon
@@ -80,7 +80,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 0.17958406, y: 0.5467658}
   m_EdgeRadius: 0
---- !u!114 &-2040276825662721407
+--- !u!114 &8038848519932348971
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -89,7 +89,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1764802482684256345}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 734a710935f6a3741a28dfc89abc5230, type: 3}
+  m_Script: {fileID: 11500000, guid: 88830fb3f2e42944d878d3af5a453adf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _isPierce: 0

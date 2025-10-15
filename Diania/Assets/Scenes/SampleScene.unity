@@ -7644,6 +7644,63 @@ MonoBehaviour:
   _itemDescription: {fileID: 132742246}
   _itemIcon: {fileID: 1931802388}
   _lootTable: {fileID: 551630837}
+--- !u!1001 &360569389
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 6129782258501726191, guid: 3e233bd2be0a1d442b585b110c107fae, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129782258501726191, guid: 3e233bd2be0a1d442b585b110c107fae, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129782258501726191, guid: 3e233bd2be0a1d442b585b110c107fae, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129782258501726191, guid: 3e233bd2be0a1d442b585b110c107fae, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129782258501726191, guid: 3e233bd2be0a1d442b585b110c107fae, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129782258501726191, guid: 3e233bd2be0a1d442b585b110c107fae, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129782258501726191, guid: 3e233bd2be0a1d442b585b110c107fae, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129782258501726191, guid: 3e233bd2be0a1d442b585b110c107fae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129782258501726191, guid: 3e233bd2be0a1d442b585b110c107fae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6129782258501726191, guid: 3e233bd2be0a1d442b585b110c107fae, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8815925264692349247, guid: 3e233bd2be0a1d442b585b110c107fae, type: 3}
+      propertyPath: m_Name
+      value: Crimson Boomerang
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3e233bd2be0a1d442b585b110c107fae, type: 3}
 --- !u!4 &374280266 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 533077857697280161, guid: af574254c1933ee41b5da662b6044767, type: 3}
@@ -148802,6 +148859,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MagicalCube
       objectReference: {fileID: 0}
+    - target: {fileID: 8291602827597142623, guid: 671d2567bd61aa54c82380442eccc308, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -151325,3 +151386,4 @@ SceneRoots:
   - {fileID: 1027151648}
   - {fileID: 908922658}
   - {fileID: 967901372}
+  - {fileID: 360569389}
