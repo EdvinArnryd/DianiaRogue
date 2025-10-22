@@ -10,6 +10,8 @@ public class Enemy : MonoBehaviour
 
     private Player _player;
 
+    private bool _gotHit;
+
     private float _health;
     private float _damage;
     private float _speed;
