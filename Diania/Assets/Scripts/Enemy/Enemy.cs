@@ -1,4 +1,5 @@
 using System;
+using System.Collections;
 using UnityEngine;
 
 public class Enemy : MonoBehaviour
@@ -30,7 +31,7 @@ public class Enemy : MonoBehaviour
 
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, _player.transform.position, _enemy.Speed * Time.deltaTime);
+        transform.position = Vector3.MoveTowards(transform.position, _player.transform.position, _speed * Time.deltaTime);
 
         if (_isColliding)
         {
@@ -46,6 +47,15 @@ public class Enemy : MonoBehaviour
 
 
         RotateTowardsPlayer();
+    }
+    
+    private IEnumerator HitReaction()
+    {
+        _speed /= 2;
+
+        yield return new WaitForSeconds(1);
+
+        _speed *= 2;
     }
 
     private void RotateTowardsPlayer()
@@ -84,6 +94,7 @@ public class Enemy : MonoBehaviour
 
     public void TakeDamage(float damage)
     {
+        StartCoroutine(HitReaction());
         _health -= damage;
         if (_health <= 0)
         {
