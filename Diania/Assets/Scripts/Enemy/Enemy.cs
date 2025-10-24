@@ -19,6 +19,8 @@ public class Enemy : MonoBehaviour
     private string _name;
 
     private bool _isColliding = false;
+
+    private const int SPEED = 1;
     void Start()
     {
         _health = _enemy.Health;
@@ -51,11 +53,11 @@ public class Enemy : MonoBehaviour
     
     private IEnumerator HitReaction()
     {
-        _speed /= 2;
+        _speed = -SPEED;
 
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.5f);
 
-        _speed *= 2;
+        _speed = SPEED;
     }
 
     private void RotateTowardsPlayer()
