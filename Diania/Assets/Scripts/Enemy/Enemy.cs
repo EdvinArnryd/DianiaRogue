@@ -9,6 +9,8 @@ public class Enemy : MonoBehaviour
     [SerializeField] private EnemySO _enemy;
     [SerializeField] private GameObject _EXPPrefab;
 
+    [SerializeField] private SpriteRenderer _sprite;
+
     private Player _player;
 
     private bool _gotHit;
@@ -55,7 +57,11 @@ public class Enemy : MonoBehaviour
     {
         _speed = -SPEED;
 
-        yield return new WaitForSeconds(0.5f);
+        _sprite.color = Color.red;
+
+        yield return new WaitForSeconds(0.3f);
+
+        _sprite.color = Color.white;
 
         _speed = SPEED;
     }
