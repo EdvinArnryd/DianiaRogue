@@ -14,8 +14,14 @@ public class Player : MonoBehaviour
     
     public event Action OnPlayerDied;
 
-    [SerializeField] private float _health = 100;
+    [SerializeField] private float _maxHealth = 100;
+    private float _health;
     [SerializeField] private Slider _healthBar;
+
+    void Start()
+    {
+        _health = _maxHealth;
+    }
 
     public void TakeDamage(float damage)
     {
@@ -34,6 +40,16 @@ public class Player : MonoBehaviour
     public float GetHealth()
     {
         return _health;
+    }
+
+    public void AddHealth(int amount)
+    {
+        _health += amount;
+        if(_health >= _maxHealth)
+        {
+            _health = _maxHealth;
+        }
+        UpdateHealthBar();
     }
 
     public void PlayerDied()
