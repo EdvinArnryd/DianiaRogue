@@ -16,3 +16,6 @@ MonoBehaviour:
   _description: Keeps you warm!
   _rarity: 0
   _icon: {fileID: 3574613206785399529, guid: 067a394fda09c2a44a1dda49d041e30d, type: 3}
+  _isStatModifier: 1
+  _statModifier: 2
+  _modifierAmount: 10

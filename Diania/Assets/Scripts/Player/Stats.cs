@@ -5,6 +5,7 @@ public class Stats : MonoBehaviour
 {
     [Header("Utility modifiers")]
     [SerializeField] float _movementSpeed;
+    [SerializeField] float _experienceGain;
 
     [Header("Defense modifiers")]
     [SerializeField] float _health;
@@ -17,4 +18,9 @@ public class Stats : MonoBehaviour
     [SerializeField] float _critChance;
     [SerializeField] float _coolDownReduction;
     [SerializeField] float _size;
+
+    private void Start()
+    {
+        
+    }
 }

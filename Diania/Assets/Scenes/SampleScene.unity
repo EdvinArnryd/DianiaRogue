@@ -151193,6 +151193,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 7027427048052299372, guid: af574254c1933ee41b5da662b6044767, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1791156153298430062}
+    - targetCorrespondingSourceObject: {fileID: 7027427048052299372, guid: af574254c1933ee41b5da662b6044767, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1791156153298430063}
   m_SourcePrefab: {fileID: 100100000, guid: af574254c1933ee41b5da662b6044767, type: 3}
 --- !u!114 &1791156153298430056 stripped
 MonoBehaviour:
@@ -151245,6 +151248,27 @@ MonoBehaviour:
   - {fileID: 2886835784469751168, guid: 50c5250d7bed99a408819eef22ddef7b, type: 3}
   - {fileID: 7720106200174226586, guid: 0bbbe78812cd3fd4a8e118d1ac9278ff, type: 3}
   _inventorySize: 4
+--- !u!114 &1791156153298430063
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1848650758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2088abecf7fa11a47b81585a964c646b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _movementSpeed: 1
+  _health: 1
+  _armor: 1
+  _healthRegen: 1
+  _lifeSteal: 1
+  _attackDamage: 1
+  _critChance: 1
+  _coolDownReduction: 1
+  _size: 1
 --- !u!1001 &4183138215530257488
 PrefabInstance:
   m_ObjectHideFlags: 0

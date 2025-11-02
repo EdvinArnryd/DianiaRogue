@@ -16,3 +16,6 @@ MonoBehaviour:
   _description: It carries magical powers!
   _rarity: 3
   _icon: {fileID: 5199979006384268662, guid: 8d9662e9ba77d6d48b581797890a44e8, type: 3}
+  _isStatModifier: 1
+  _statModifier: 8
+  _modifierAmount: 18

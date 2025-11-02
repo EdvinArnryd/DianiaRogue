@@ -16,3 +16,6 @@ MonoBehaviour:
   _description: Looks useful
   _rarity: 1
   _icon: {fileID: 4004708080983207187, guid: 869136bae170a964789c573effa65492, type: 3}
+  _isStatModifier: 1
+  _statModifier: 7
+  _modifierAmount: 10

@@ -16,3 +16,6 @@ MonoBehaviour:
   _description: This old rusty thing will protect your face!
   _rarity: 1
   _icon: {fileID: 1126309885241386307, guid: 8bb20674fe7741f438aedd97235c956d, type: 3}
+  _isStatModifier: 1
+  _statModifier: 3
+  _modifierAmount: 10

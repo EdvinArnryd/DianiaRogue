@@ -16,3 +16,6 @@ MonoBehaviour:
   _description: Money!
   _rarity: 0
   _icon: {fileID: 5727101463259792520, guid: ac5d2bf1084bf8846acf85d2ad535e3e, type: 3}
+  _isStatModifier: 0
+  _statModifier: 0
+  _modifierAmount: 0

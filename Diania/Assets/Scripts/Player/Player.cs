@@ -7,7 +7,7 @@ public class Player : MonoBehaviour
 {
     private string _name;
 
-    private bool _isAlive = true;
+    // private bool _isAlive = true;
 
     [SerializeField] private Transform _playerTransform;
     public Transform PlayerTransform => _playerTransform;
@@ -54,7 +54,7 @@ public class Player : MonoBehaviour
 
     public void PlayerDied()
     {
-        _isAlive = false;
+        // _isAlive = false;
         OnPlayerDied?.Invoke();
     }
 }

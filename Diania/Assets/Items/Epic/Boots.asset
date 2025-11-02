@@ -16,3 +16,6 @@ MonoBehaviour:
   _description: Makes you go faster!
   _rarity: 2
   _icon: {fileID: 7902364575885455685, guid: 091a1c9903923fa4495e0c1f795440b5, type: 3}
+  _isStatModifier: 1
+  _statModifier: 0
+  _modifierAmount: 10

@@ -16,3 +16,6 @@ MonoBehaviour:
   _description: Expands the mind!
   _rarity: 0
   _icon: {fileID: -5789514898900560965, guid: df64216e5c94a9d42bfbb1dd95a00e62, type: 3}
+  _isStatModifier: 1
+  _statModifier: 9
+  _modifierAmount: 5

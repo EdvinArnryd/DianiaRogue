@@ -16,3 +16,6 @@ MonoBehaviour:
   _description: Increases crit chance
   _rarity: 2
   _icon: {fileID: -4346244404228752641, guid: ed9dd5f2b14004749b17cf9535e11593, type: 3}
+  _isStatModifier: 1
+  _statModifier: 6
+  _modifierAmount: 12
